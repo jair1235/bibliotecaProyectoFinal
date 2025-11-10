@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Biblioteca</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="card">
+    <h1>Biblioteca</h1>
+
+    <div class="flex">
+      <div class="col">
+        <h3>Nuevo Libro</h3>
+        <input id="titulo" placeholder="Título" />
+        <input id="autor" placeholder="Autor" />
+        <input id="editorial" placeholder="Editorial" />
+        <input id="fecha" type="date" placeholder="Fecha de Publicación" />
+        <button onclick="agregarLibro()">Agregar Libro</button>
+      </div>
+
+      <div class="col">
+        <h3>Buscar Libro</h3>
+        <div class="form-group">
+          <input id="buscarId" placeholder="Por ID" />
+          <button onclick="buscarPorId()">Buscar</button>
+        </div>
+        <div class="form-group">
+          <input id="buscarAutor" placeholder="Por Autor" />
+          <button onclick="buscarPorAutor()">Buscar</button>
+        </div>
+        <hr />
+        <h3>Lista de Libros</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Título</th>
+              <th>Autor</th>
+              <th>Editorial</th>
+            </tr>
+          </thead>
+          <tbody id="tablaLibros"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
